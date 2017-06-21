@@ -1,0 +1,18 @@
+management:
+  security:
+    enabled: false
+    
+# Application Info
+info:
+  component: 'API de Rastreabilidade de Bets'
+  build:
+    version: '@project.version@'
+    name: '@project.name@'
+    
+spring:
+  profiles: default
+  application:
+      name: caliban
+      
+server:
+  context-path: /caliban
