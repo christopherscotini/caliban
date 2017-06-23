@@ -1,3 +1,6 @@
+spring:
+  profiles.active: default
+  
 management:
   security:
     enabled: false
@@ -9,10 +12,29 @@ info:
     version: '@project.version@'
     name: '@project.name@'
     
+---    
 spring:
   profiles: default
   application:
-      name: caliban
+    name: caliban
+      
+server:
+  context-path: /caliban
+
+---
+spring:
+  profiles: test
+  application:
+    name: caliban
+      
+server:
+  context-path: /caliban
+  
+---
+spring:
+  profiles: prod
+  application:
+    name: caliban
       
 server:
   context-path: /caliban

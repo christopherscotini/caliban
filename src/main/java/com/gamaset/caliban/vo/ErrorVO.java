@@ -1,4 +1,4 @@
-package com.gamaset.caliban.infra.exception;
+package com.gamaset.caliban.vo;
 
 import java.util.List;
 

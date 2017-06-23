@@ -1,17 +1,27 @@
 package com.gamaset.caliban.endpoint;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gamaset.caliban.service.SayHelloService;
+
+/**
+ * 
+ * @author Christopher Rozario
+ *
+ * @since
+ */
 @RestController
 public class HelloController {
 
+	@Autowired
+	private SayHelloService sayHelloService;
+	
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
-	public ResponseEntity<?> hello(){
+	public String hello(){
 		
-		 return new ResponseEntity<String>("Olá pessoal.", HttpStatus.OK);
+		 return sayHelloService.say();
 	}
 }
