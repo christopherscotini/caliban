@@ -1,4 +1,4 @@
-package com.gamaset.caliban;
+package com.gamaset.caliban.integration;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
